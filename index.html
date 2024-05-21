@@ -6,21 +6,26 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <title>Warp:PADD</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.svg" />
+
+    <title>Duly Noted - Notes. Simplified.</title>
   </head>
   <body>
+    <nav class="main-navigation">
+      <div class="nav-logo">
+        <i class="ph-fill ph-pen"></i>
+        <p class="logo-title">DulyNoted</p>
+      </div>
+      <button class="add-notes" type="button">
+        New Note
+        <i class="ph-bold ph-plus"></i>
+      </button>
+    </nav>
     <div class="container" id="note-app">
-      <div class="notes-sidebar">
-        <button class="add-notes" type="button">New Note</button>
+      <div id="sidebar" class="notes-sidebar">
         <div class="notes-list">
           <div class="notes-list-item notes-list-item_selected">
-            <div class="notes-sm-title">Lecture Notes</div>
+            <div class="notes-sm-title">Meeting Notes</div>
             <div class="notes-sm-body">This is a note body.</div>
             <div class="notes-sm-update">Monday 9:30am</div>
           </div>
@@ -29,15 +34,14 @@
       <!-- This section contains markup for the main note viewing/editing window -->
       <div class="note-view-main">
         <input type="text" class="note-title" placeholder="Enter a title." />
-        <textarea
-          class="note-body"
-          placeholder="Enter note contents"
-        ></textarea>
+        <textarea class="note-body" placeholder="Write a note."></textarea>
         <div class="note-btn-cluster">
           <button class="delete-note-btn">
             <i class="ph-fill ph-trash"></i>
           </button>
-          <button class="save-note-btn">Save</button>
+          <button class="save-note-btn">
+            <i class="ph-fill ph-floppy-disk-back"></i>
+          </button>
         </div>
       </div>
     </div>
